@@ -214,9 +214,10 @@ ctx.onmessage = (event: MessageEvent<PbnRequest>) => {
         }
       }
       labels[i] = bestIdx;
-      sumR[bestIdx] += r;
-      sumG[bestIdx] += g;
-      sumB[bestIdx] += b;
+      sumR[bestIdx] = sumR[bestIdx]! + r;
+      sumG[bestIdx] = sumG[bestIdx]! + g;
+      sumB[bestIdx] = sumB[bestIdx]! + b;
+
       counts[bestIdx]!++;
     }
 
