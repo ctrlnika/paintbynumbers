@@ -146,5 +146,15 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: var(--font-sans);
+    background-image: radial-gradient(var(--paper-line) 0.6px, transparent 0.6px);
+    background-size: 18px 18px;
   }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+  }
+
 }
