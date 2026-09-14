@@ -111,9 +111,10 @@ function kmeans(samples: Float32Array, k: number, iterations = 14) {
           bestIdx = c;
         }
       }
-      sums[bestIdx * 3] += l;
-      sums[bestIdx * 3 + 1] += a;
-      sums[bestIdx * 3 + 2] += b;
+      sums[bestIdx * 3] = sums[bestIdx * 3]! + l;
+      sums[bestIdx * 3 + 1] = sums[bestIdx * 3 + 1]! + a;
+      sums[bestIdx * 3 + 2] = sums[bestIdx * 3 + 2]! + b;
+
       counts[bestIdx]!++;
     }
     for (let c = 0; c < k; c++) {
